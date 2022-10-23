@@ -31,7 +31,8 @@ import com.backendportfolio.portfolio.Security.Service.UsuarioService;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "https://federicoburgosdev-8740e.web.app")
+@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "https://federicoburgosdev-8740e.web.app")
 public class AuthController {
     
     @Autowired
