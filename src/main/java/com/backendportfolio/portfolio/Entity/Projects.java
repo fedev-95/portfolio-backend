@@ -17,7 +17,7 @@ public class Projects {
     @Column(columnDefinition = "LONGTEXT")
     private String img;
     private String title;
-    private String date;
+    private int date;
     private String description;
     private String prjLink;
 
@@ -25,7 +25,7 @@ public class Projects {
     public Projects() {
     }
 
-    public Projects(String img, String title, String date, String description, String prjLink) {
+    public Projects(String img, String title, int date, String description, String prjLink) {
         this.img = img;
         this.title = title;
         this.date = date;
@@ -59,11 +59,11 @@ public class Projects {
         this.title = title;
     }
 
-    public String getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(int date) {
         this.date = date;
     }
 

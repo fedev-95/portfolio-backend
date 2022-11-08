@@ -68,8 +68,8 @@ public class ProjectsController {
             return new ResponseEntity(new Mensaje("El titulo es obligatorio."), HttpStatus.BAD_REQUEST);
         }
         
-        if (StringUtils.isBlank(projectsDto.getDate())) {
-            return new ResponseEntity(new Mensaje("La fecha es obligatoria."), HttpStatus.BAD_REQUEST);
+        if (projectsDto.getDate()<1900) {
+            return new ResponseEntity(new Mensaje("El año tiene que se mayor a 1900."), HttpStatus.BAD_REQUEST);
         }
         
         if (StringUtils.isBlank(projectsDto.getDescription())) {
@@ -101,8 +101,8 @@ public class ProjectsController {
             return new ResponseEntity(new Mensaje("El titulo es obligatorio."), HttpStatus.BAD_REQUEST);
         }
         
-        if (StringUtils.isBlank(projectsDto.getDate())) {
-            return new ResponseEntity(new Mensaje("La fecha es obligatoria."), HttpStatus.BAD_REQUEST);
+        if (projectsDto.getDate()<1900) {
+            return new ResponseEntity(new Mensaje("El año tiene que se mayor a 1900."), HttpStatus.BAD_REQUEST);
         }
         
         if (StringUtils.isBlank(projectsDto.getDescription())) {

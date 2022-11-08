@@ -11,7 +11,7 @@ public class ProjectsDto {
     @NotBlank
     private String title;
     @NotBlank
-    private String date;
+    private int date;
     @NotBlank
     private String description;
     @NotBlank
@@ -21,7 +21,7 @@ public class ProjectsDto {
     public ProjectsDto() {
     }
 
-    public ProjectsDto(String img, String title, String date, String description, String prjLink) {
+    public ProjectsDto(String img, String title, int date, String description, String prjLink) {
         this.img = img;
         this.title = title;
         this.date = date;
@@ -46,11 +46,11 @@ public class ProjectsDto {
         this.title = title;
     }
 
-    public String getDate() {
+    public int getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(int date) {
         this.date = date;
     }
 
