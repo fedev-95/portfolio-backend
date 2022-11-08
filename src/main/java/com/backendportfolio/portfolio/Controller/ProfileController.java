@@ -28,6 +28,11 @@ public class ProfileController {
     @Autowired
     ProfileService profileService;
 
+    @GetMapping("/prf-exists/{id}")
+    public boolean exists(@PathVariable("id") int id) {
+        return profileService.existsById(id);
+    }
+    
     //busca un elemento por id
     @GetMapping("/prf-detail/{id}")
     public ResponseEntity<Profile> getById(@PathVariable("id") int id) {
